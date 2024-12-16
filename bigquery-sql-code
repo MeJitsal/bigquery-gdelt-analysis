@@ -1,0 +1,60 @@
+--food query
+SELECT DISTINCT 
+    Year,
+    SQLDATE,
+    Actor1CountryCode,
+    Actor1Geo_Fullname,
+    Actor1Geo_CountryCode,
+    AvgTone,
+    SOURCEURL
+FROM 
+    `gdelt-bq.full.events`
+WHERE 
+    Year IN (2023, 2024) 
+    AND Actor1CountryCode = 'USA'
+    AND LOWER(SOURCEURL) LIKE '%food%'
+    OR LOWER(SOURCEURL) LIKE '%grocery%';
+
+--transportation query
+    SELECT DISTINCT 
+    Year,
+    SQLDATE,
+    Actor1CountryCode,
+    Actor1Geo_Fullname,
+    Actor1Geo_CountryCode,
+    AvgTone,
+    SOURCEURL
+FROM 
+    `gdelt-bq.full.events`
+WHERE 
+    Year IN (2023, 2024) 
+    AND Actor1CountryCode = 'USA'
+    AND (
+        LOWER(SOURCEURL) LIKE '%transportation%' 
+        OR LOWER(SOURCEURL) LIKE '%congestion-pricing%'
+    );
+
+--housing query
+SELECT DISTINCT 
+    Year,
+    SQLDATE,
+    Actor1CountryCode,
+    Actor1Geo_Fullname,
+    Actor1Geo_CountryCode,
+    AvgTone,
+    SOURCEURL
+FROM 
+    `gdelt-bq.full.events`
+WHERE 
+    Year IN (2023, 2024) 
+    AND Actor1CountryCode = 'USA'
+    AND (
+        LOWER(SOURCEURL) LIKE '%housing%' 
+        OR LOWER(SOURCEURL) LIKE '%home-prices%' 
+        OR LOWER(SOURCEURL) LIKE '%real-estate%' 
+        OR LOWER(SOURCEURL) LIKE '%house-prices%' 
+        OR LOWER(SOURCEURL) LIKE '%mortgage%' 
+        OR LOWER(SOURCEURL) LIKE '%property%'
+    );
+
+
