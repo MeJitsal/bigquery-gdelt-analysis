@@ -10,14 +10,14 @@ Percentile Calculations: Calculates the 25th and 75th percentiles for the AvgTon
 
 Geographic Data Parsing: Extracts the first geolocation name (state) from Actor1Geo_Fullname.
 
-Key Features:
+**Key Features:**
 Data Extraction: Queries GDELT tables for Food, Housing, and Transportation.
 Data Transformation: Aggregates data weekly, calculates percentiles, and extracts state information from Actor1Geo_Fullname.
 Data Load: Saves the processed DataFrame back to BigQuery for further analysis or visualization.
 Sentiment Analysis: Measures sentiment using the GDELT "AvgTone" metric, offering a proxy for public perception.
 Technologies Used: BigQuery, Pandas, Python.
 
-📦 Installation
+**Installation:**
 Clone the repository:
 git clone https://github.com/your-username/your-repository-name.git
 
