@@ -19,14 +19,18 @@ Technologies Used: BigQuery, Pandas, Python.
 
 **Installation:**
 Clone the repository:
+```bash
 git clone https://github.com/your-username/your-repository-name.git
 
-Navigate into the project directory:
+#Navigate into the project directory:
 cd your-repository-name
 
-Install the required Python libraries:
+#Install the required Python libraries:
 pip install -r requirements.txt
-
+```
 Configure access to Google Cloud BigQuery (ensure you have the necessary credentials and permissions).
 
 
+```bash
+python3 bigquery_gdelt_cpi.py
+```
