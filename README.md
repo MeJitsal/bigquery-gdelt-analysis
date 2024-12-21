@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ```
 Configure access to Google Cloud BigQuery (ensure you have the necessary credentials and permissions).
 
-
+Run python script:
 ```bash
 python3 bigquery_gdelt_cpi.py
 ```
